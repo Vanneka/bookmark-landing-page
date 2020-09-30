@@ -2,6 +2,9 @@
 
 ![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
 
+## LIVE DEMO
+https://vanneka.github.io/bookmark-landing-page/
+
 ## Hi There! 👋
 This is my entry for the Frontend Mentor challenge
 
