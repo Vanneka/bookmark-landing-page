@@ -1,0 +1,866 @@
+@import 'style-config';
+/*STANDARD COMMENT FORMAT DOWN HERE*/
+/*HEADER STYLING STARTS HERE*/
+/*HEADER STYLING ENDS HERE*/
+/*nav section*/
+/*nav section*/
+
+/*STANDARDS STYLING STARTS HERE*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: $link-trans;
+
+    &:hover {
+        transition: $link-trans;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid transparent;
+
+    &:hover {
+        cursor: pointer;
+        transition: $link-trans;
+    }
+}
+
+.btn-purple {
+    background-color: $soft-blue;
+    color: $white-font;
+    margin: 0 4px;
+    box-shadow:0px 4px 12px -8px $soft-blue;
+
+    &:hover {
+        color: $soft-blue;
+        background-color: #fff;
+        border: 2px solid $soft-blue;
+    }
+}
+
+.btn-grey {
+    background-color: $grey;
+    color: $dark-font;
+    margin: 0 4px;
+    box-shadow:0px 4px 12px -8px $dark-font;
+
+    &:hover {
+        color: $ash;
+        background-color: #fff;
+        border: 2px solid $ash;
+    }
+}
+
+.btn-orange {
+    background-color: $soft-red;
+    color: $white-font;
+    margin: 0 4px;
+
+    &:hover {
+        color: $soft-blue;
+        background-color: #fff;
+        border: 2px solid $soft-blue;
+    }
+}
+
+.mob-nav-btn {
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+
+    &:hover {
+        color: $dark-font;
+        background-color: #fff;
+    }
+}
+
+// to hide and show the accordion and tabs section
+.show {
+    display: block;
+    transition: display 0.2s;
+}
+
+.hide {
+    display: none;
+    transition: display 0.2s;
+}
+
+// to let the client know which tab is active
+li.active-tab {
+    &::after {
+        content: "";
+        width: 150px;
+        height: 3px;
+        background-color: $soft-red;
+        display: block;
+        position: relative;
+        margin-left: 105px;
+        margin-top: 0;
+        padding: 0;
+        top: 10px;
+    }
+}
+
+/*STANDARDS STYLING ENDS HERE*/
+
+/*HEADER STYLING STARTS HERE*/
+header {
+
+    /*nav section*/
+    nav {
+        position: relative;
+        & #desktop-nav {
+            display: none;
+        }
+
+        & .side-bar-items {
+            display: none;
+        }
+
+        & #mobile-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 30px;
+
+            & #close {
+                display: none;
+            }
+        }
+
+        .active {
+            background-color: $soft-blue;
+            color: $white-font;
+            
+            a {
+                color: $white-font;
+            }
+        }
+
+        /*SIDEBAR STYLING*/ 
+        .side-bar-items {
+            position: absolute;
+            z-index: 99;
+            background-color: hsla(229, 31%, 21%, 0.9);
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            padding: 20px 30px;
+            transition: all ease 0.3s;
+
+            a {
+                color: $white;
+            }
+
+            .top-bar {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 40px;
+            }
+
+            ul {
+                text-align: center;
+
+                li {
+                    padding: 30px 0;
+                    text-transform: uppercase;
+                }
+
+                .mob-nav-links {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                }
+            }
+
+            .sidebar-btn {
+                text-align: center;
+
+                button {
+                    width: 80%;
+                    margin: 30px 0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+
+            .nav-social {
+                display: flex;
+                justify-content: center;
+                margin-top: 240px;
+                font-size: 30px;
+
+                li {
+                    padding: 0 20px;
+                }
+            }
+        }
+        /*SIDEBAR STYLING*/ 
+    }
+
+    /*nav section*/
+
+    /*header-section section*/
+    & .header-section {
+        padding: 40px 0 40px 0;
+        position: relative;
+
+        & .header-img {
+            img {
+                width: 100%;
+            }
+        }
+
+        & .header-text {
+            text-align: center;
+            padding: 30px;
+
+            & h2 {
+                color: $dark-font;
+                font-size: 30px;
+            }
+
+            & p {
+                color: $light-font;
+                padding-bottom: 15px;
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 200px;
+            height: 200px;
+            display: block;
+            right: 0px;
+            top: 115px;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            background-color: $soft-blue;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
+    /*header-section section*/
+}
+
+/*HEADER STYLING ENDS HERE*/
+
+/*FEATURES STYLING STARTS HERE*/
+.features {
+    text-align: center;
+    padding-bottom: 30px;
+
+    /*features-text section*/
+
+    & .features-text {
+        padding: 30px;
+
+
+        & h2 {
+            color: $dark-font;
+            font-size: 28px;
+        }
+
+        & p {
+            color: $light-font;
+            padding-bottom: 15px;
+        }
+    }
+
+    /*features-text section*/
+
+    /*tabs-section section*/
+    & #all-tabs {
+        padding: 10px 30px;
+        position: relative;
+
+        & .all-tab-title {
+            position: relative;
+// hide border-top
+            &::before {
+                content:"";
+                width: 320px;
+                height: 2px;
+                background-color: transparent;
+                display: block;
+            }
+        }
+
+        & .tab-container {
+            position: relative;
+
+            & .tab-item {
+                margin: 40px 0;
+
+                & img {
+                    width: 100%;
+                    padding-bottom: 30px;
+                }
+
+                & h2 {
+                    color: $dark-font;
+                }
+
+                & p {
+                    color: $light-font;
+                    font-size: 14px;
+                }
+
+                & button {
+                    display: none;
+                }
+            }
+
+            &::before {
+                content: "";
+                width: 300px;
+                height: 200px;
+                display: block;
+                left: -50px;
+                top: 55px;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background-color: $soft-blue;
+                position: absolute;
+                z-index: -1;
+            }
+
+        }
+    }
+
+    /*tabs-section section*/
+}
+
+/*FEATURES STYLING ENDS HERE*/
+
+/*DOWNLOAD STYLING STARTS HERE*/
+.download {
+    padding: 10px 30px;
+    text-align: center;
+
+    /*download-text section*/
+    & .download-text {
+        padding: 30px 0;
+
+        & h2 {
+            color: $dark-font;
+            font-size: 28px;
+        }
+
+        & p {
+            color: $light-font;
+            padding-bottom: 15px;
+        }
+    }
+
+    /*download-text section*/
+
+    /*cards section*/
+    .all-cards {
+        padding: 0 20px;
+
+        .card {
+            background-color: $white;
+            margin: 30px 0;
+            padding: 45px 0 30px 0;
+            border-radius: 5px;
+            box-shadow: 0 7px 24px -18px $ash;
+
+            img {
+                padding: 30px 0;
+            }
+
+            #dotted-img {
+                width: 100%;
+            }
+
+            p {
+                margin: 10px 0;
+                font-weight: bold;
+            }
+
+            small {
+                color: $light-font;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+    }
+
+    /*cards section*/
+}
+
+/*DOWNLOAD STYLING ENDS HERE*/
+
+/*FAQ STYLING STARTS HERE*/
+.faq {
+    padding: 10px 30px;
+
+    /*faq-text section*/
+    .faq-text {
+        padding: 30px 0;
+        text-align: center;
+
+        & h2 {
+            color: $dark-font;
+            font-size: 28px;
+        }
+
+        & p {
+            color: $light-font;
+            padding-bottom: 15px;
+        }
+    }
+
+    /*faq-text section*/
+
+    /*accordion section*/
+    .all-accordion {
+        padding: 10px 0;
+
+        .accordion {
+
+            button {
+                width: 100%;
+                padding: 10px;
+                text-align: left;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $ash;
+
+                &:after {
+                    content: "\25be";
+                    float: right;
+                    scale: (1.5);
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                color: $light-font;
+                font-size: 14px;
+                line-height: 1.5em;
+                padding: 10px;
+                margin: 0;
+                // display: none;
+            }
+        }
+
+    }
+
+    /*accordion section*/
+    .faq-btn {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+/*FAQ STYLING ENDS HERE*/
+
+/*CTA STYLING STARTS HERE*/
+.cta {
+    background-color: $soft-blue;
+    padding: 50px 20px;
+    text-align: center;
+    color: $white;
+
+    /*cta-text section*/
+    .cta-text {
+        .cta-subtitle {
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+
+    /*cta-text section*/
+
+    /*form section*/
+    .cta-form {
+        input {
+            padding: 12px;
+            border: none;
+            width: 90%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            &::placeholder {
+                color: $light-font;
+            }
+        }
+
+            .error-email, .error-input {
+                text-align: center;
+                background-color: $soft-red;
+                width: 70%;
+                margin: 5px auto;
+                border-radius: 5px;
+                font-size: 12px;
+                display: none;
+            }
+
+            .success {
+                text-align: center;
+                background-color: $soft-green;
+                width: 70%;
+                margin: 5px auto;
+                border-radius: 5px;
+                font-size: 12px;
+                color: $dark-font;
+                display: none;
+            }
+           
+
+        button {
+            width: 90%;
+        }
+    }
+
+    /*form section*/
+
+}
+
+/*CTA STYLING ENDS HERE*/
+
+/*FOOTER STYLING STARTS HERE*/
+footer {
+    text-align: center;
+    background-color: $very-dark-blue;
+    padding: 20px 0;
+
+    a {
+        color: $white;
+    }
+
+    /*logo section*/
+    .footer-logo {
+        padding: 20px 0;
+    }
+
+    /*logo section*/
+
+    /*footer-menu section*/
+    .footer-nav {
+        text-transform: uppercase;
+        font-size: 14px;
+
+        li {
+            padding: 10px 0;
+        }
+    }
+
+    /*footer-menu section*/
+
+    /*footer-socials section*/
+    .footer-socials {
+        padding: 20px 0;
+
+        ul {
+            display: inline-flex;
+
+            li {
+                padding: 0 20px;
+                font-size: 22px;
+            }
+        }
+    }
+
+    /*footer-socials section*/
+}
+
+/*FOOTER STYLING ENDS HERE*/
+
+/*MEDIA QUERIES STYLING STARTS HERE*/
+@media screen and (min-width: 1080px) {
+
+    /*header section*/
+    header {
+        nav {
+            #mobile-nav {
+                display: none;
+            }
+
+            .side-bar-items {
+                display: none;
+            }
+
+            #desktop-nav {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 30px;
+
+                .logo {
+                    margin-right: auto;
+                }
+
+                .menu-items {
+                    ul {
+                        display: inline-flex;
+                        text-transform: uppercase;
+                        font-size: 14px;
+
+                        li {
+                            padding: 0 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 70px;
+
+            .header-img {
+                order: 2;
+            }
+
+            .header-text {
+                order: 1;
+                text-align: left;
+
+                pa .header-subtitle {
+                    width: 50%;
+                }
+            }
+
+            &::before {
+                content: "";
+                width: 450px;
+                height: 300px;
+                display: block;
+                right: 0px;
+                top: 115px;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+                background-color: $soft-blue;
+                position: absolute;
+                z-index: -1;
+            }
+        }
+    }
+
+    /*header section*/
+
+    /*features section*/
+    .features {
+
+        .features-text {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #all-tabs {
+            // display: inline-flex;
+            // flex-direction: column;
+            position: relative;
+
+            .all-tab-title {
+                display: flex;
+                justify-content: center;
+                padding: 0 20px;
+
+                li {
+                    padding: 20px 50px;
+                    text-align: center;
+                    border: none;
+
+                    & li:nth-child(1) {
+                        border-top: 1px solid transparent;
+                    }
+                }
+
+            }
+
+            .tab-container {
+                padding: 0 100px;
+                text-align: center;
+
+                .tab-item {
+
+                    .tab-inner {
+                        display: flex;
+                        flex-direction: row;
+
+                        .tab-text {
+                            text-align: left;
+                            padding: 0 60px 0 40px;
+                            flex: 1;
+                            button {
+                                display: block;
+                                // margin-top: 20px;
+                            }
+                        }
+
+                        .tab-img {
+                            padding: 0 20px;
+                            width: 40%;
+                            margin: 0 auto;
+                            // flex: 1;
+                        }
+                    }
+                    
+                    &::before {
+                        content: "";
+                        width: 450px;
+                        height: 280px;
+                        display: block;
+                        left: -50px;
+                        top: 50px;
+                        border-top-right-radius: 50%;
+                        border-bottom-right-radius: 50%;
+                        background-color: $soft-blue;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+               
+            }
+        }
+
+    }
+
+    /*features section*/
+
+    /*download section*/
+    .download {
+        padding: 40px 0 180px 0;
+
+        .all-cards {
+            display: flex;
+
+            .card {
+                margin: 0 40px;
+
+                &:nth-child(2) {
+                    position: relative;
+                    top: 60px;
+                }
+
+                &:nth-child(3) {
+                    position: relative;
+                    top: 120px;
+                }
+            }
+        }
+    }
+
+    /*download section*/
+
+    /*faq section*/
+    .faq {
+        .faq-text {
+            width: 40%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .all-accordion {
+            width: 40%;
+            margin: 0 auto;
+        }
+
+        .faq-btn {
+            margin-top: 40px;
+        }
+    }
+
+    /*faq section*/
+
+    /*cta section*/
+    .cta {
+
+        /*form section*/
+        .cta-form {
+            form {
+                width: 100%;
+            }
+
+            .form-contents {
+                input {
+                    width: 30%;
+                }
+
+                button {
+                    width: auto;
+                }
+            }
+
+            .error-email, .error-input, .success {
+                width: 30%;
+            }
+        }
+
+        /*form section*/
+    }
+
+    /*cta section*/
+
+    /*footer section*/
+    footer {
+        padding: 20px 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .footer-nav li {
+            display: inline-flex;
+            padding: 0 30px;
+        }
+
+        .footer-socials {
+            margin-left: auto;
+        }
+    }
+
+    /*footer section*/
+
+    li.active-tab {
+        &::after {
+            content: "";
+            width: 150px;
+            height: 5px;
+            background-color: $soft-red;
+            display: block;
+            position: relative;
+            margin-left: 0;
+            margin-top: 0;
+            padding: 0;
+            top: 10px;
+        }
+    }
+}
+/*MEDIA QUERIES STYLING ENDS HERE*/
+/*nav section*/
+/*nav section*/
